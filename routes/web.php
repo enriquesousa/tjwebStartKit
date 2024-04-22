@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -18,3 +18,15 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+/*
+|--------------------------------------------------------------------------
+| Mis Rutas
+|--------------------------------------------------------------------------
+*/
+
+// Pagina de Ayuda y Descripción del Proyecto
+Route::get('/page/ayuda', function () {
+    return view('page_ayuda');  
+})->name('page.ayuda');
