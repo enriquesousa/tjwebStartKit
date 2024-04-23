@@ -36,6 +36,7 @@
 
                         <div class="text-center">
 
+                            {{-- Logo Computer Animated SVG --}}
                             <svg id="Layer_1" class="svg-computer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 424.2 424.2">
                                 <style>
                                     .st0{fill:none;stroke: #ffffff;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
@@ -59,16 +60,16 @@
 
                             <div class="row mt-5">
 
-                                {{-- Login --}}
+                                {{-- Aplicación --}}
                                 <div class="col-md-6">
                                     <div class="text-center mt-3 ps-1 pe-1">
                                         <div class="avatar-md rounded-circle bg-soft-light mx-auto">
-                                            <a href="{{ route('login') }}" class="">
+                                            <a href="{{ route('backend_welcome') }}" class="">
                                                 <i class="dripicons-jewel font-22 avatar-title"></i>
                                             </a>
                                         </div>
-                                        <a href="{{ route('login') }}" class=""><h5 class="text-uppercase mt-3 text-white">Aplicación</h5></a>
-                                        <p class="text-white-50">Ir directamente a la aplicación, donde podras iniciar sesión o crear una cuenta para acceder</p>
+                                        <a href="{{ route('backend_welcome') }}" class=""><h5 class="text-uppercase mt-3 text-white">Aplicación</h5></a>
+                                        <p class="text-white-50">Ir directamente a la aplicación, donde podrás iniciar sesión o crear una cuenta para acceder</p>
                                     </div>
                                 </div>
                                 
@@ -82,7 +83,7 @@
                                             </a>
                                         </div>
                                         <a href="{{ route('page.ayuda') }}" class=""><h5 class="text-uppercase mt-3 text-white">Ayuda</h5></a>
-                                        <p class="text-white-50">Descripcion breve de la aplicacion. Para mayor informacion favor de contactarnos. <a href="mailto:#" class="text-white-50 fw-bold">esweb@domain.com</a></p>
+                                        <p class="text-white-50">Descripción breve de la aplicación. Para mayor información favor de contactarnos. <a href="mailto:#" class="text-white-50 fw-bold">soporte@tjweb.com.mx</a></p>
                                     </div>
                                 </div> 
 
@@ -99,14 +100,14 @@
         </div>
         <!-- end page -->
 
-        <div class="text-center w-75 m-auto">
+        {{-- TJ Web Logo --}}
+        <div class="text-center w-75 m-auto mb-2">
             <img src="{{ asset('logo/TJWeblogo1.png')}}" alt="logo" height="100">
         </div>
         
         <footer class="footer footer-alt">
             2023 - <script>document.write(new Date().getFullYear())</script> &copy; TJ Web Start Kit <a href="" class="text-white-50">TJ Web</a> 
         </footer>
-
 
         <!-- App js -->
         <script src="{{ asset('backend/assets/js/vendor.min.js') }}"></script>
