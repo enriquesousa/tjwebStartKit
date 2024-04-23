@@ -49,7 +49,7 @@
                                 <p class="card-text">Este es un sistema de punto de partida para iniciar una aplicación web con Laravel 11 con las siguientes tecnologías y funcionalidades.</p>
 
                                 {{-- Acordeón --}}
-                                <div id="accordion" class="custom-accordion">
+                                {{-- <div id="accordion" class="custom-accordion">
                                     <div class="card mb-1 shadow-none">
                                         <a href="#collapseOne" class="text-dark collapsed" data-bs-toggle="collapse"
                                             aria-expanded="false" aria-controls="collapseOne">
@@ -86,6 +86,43 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div> --}}
+
+                                {{-- Acordeón --}}
+                                <div class="accordion custom-accordion" id="custom-accordion-one">
+
+                                    <div class="card mb-0">
+                                        <div class="card-header" id="headingNine">
+                                            <h5 class="m-0 position-relative">
+                                                <a class="custom-accordion-title text-reset d-block collapsed" data-bs-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                                    {{ __('Features') }} 
+                                                    <i class="mdi mdi-chevron-down accordion-arrow"></i>
+                                                </a>
+                                            </h5>
+                                        </div>
+
+                                        <div id="collapseNine" class="collapse" aria-labelledby="headingFour" data-bs-parent="#custom-accordion-one" style="">
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li>Laravel 11</li>
+                                                    <li>Laravel Breeze</li>
+                                                    <li>Localización America/Tijuana</li>
+                                                    <li>Traducción a Español</li>
+                                                    <li>Traducción a Ingles</li>
+                                                    <li>Plantilla Backend Bootstrap</li>
+                                                    <li>Registrar usuario</li>
+                                                    <li>Login con username, teléfono o correo electrónico</li>
+                                                    <li>Validación de Correo Electrónico</li>
+                                                    <li>Autenticación de dos factores con correo electrónico</li>
+                                                    <li>CRUD Admins</li>
+                                                    <li>CRUD Empleados</li>
+                                                    <li>CRUD Clientes</li>
+                                                    <li>CRUD Proveedores</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
                                 </div>
                                 
                                 <p class="card-text mt-2">

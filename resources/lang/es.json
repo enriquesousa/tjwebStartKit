@@ -112,8 +112,13 @@
     "Application": "Aplicación",
     "Help": "Ayuda",
     "Go directly to the app, where you can log in or create an account to access": "Ir directamente a la aplicación, donde puedes iniciar sesión o crear una cuenta para acceder",
-    "Brief description of the application. For more information please contact us": "Breve descripción de la aplicación. Para obtener más información, póngase en contacto con nosotros"
+    "Brief description of the application. For more information please contact us": "Breve descripción de la aplicación. Para obtener más información, póngase en contacto con nosotros",
 
+    "You do not have an account? Create your account, it will take you less than a minute": "¿No tienes una cuenta? Crea tu cuenta, tomará menos de un minuto",
+
+    "Features": "Características",
+
+    "Enter your email, phone or username and password to access the administration panel.": "Introduce tu correo electrónico, teléfono o usuario y contraseña para acceder al panel de administración."
 
 
 }

@@ -112,32 +112,29 @@
                                 </form>
 
                                 <br>
+                          
 
                                 {{-- Acordeón --}}
-                                <div id="accordion" class="custom-accordion">
-                                    <div class="card mb-1 shadow-none">
-                                        <a href="#collapseOne" class="text-dark collapsed" data-bs-toggle="collapse"
-                                            aria-expanded="false" aria-controls="collapseOne">
-                                            <div class="card-header btn btn-warning w-100 waves-effect waves-light"
-                                                id="headingOne">
-                                                <h6 class="text-center mb-0">
-                                                    {{ __('Login Demo') }}
-                                                    <i class="mdi mdi-minus float-end accor-plus-icon"></i>
-                                                </h6>
-                                            </div>
-                                        </a>
+                                <div class="accordion custom-accordion" id="custom-accordion-one">
 
-                                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-                                            data-bs-parent="#accordion" style="">
+                                    <div class="card mb-0">
+                                        <div class="card-header" id="headingNine">
+                                            <h5 class="m-0 position-relative">
+                                                <a class="custom-accordion-title text-reset d-block collapsed" data-bs-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                                    {{ __('Login Demo') }} <i class="mdi mdi-chevron-down accordion-arrow"></i>
+                                                </a>
+                                            </h5>
+                                        </div>
+
+                                        <div id="collapseNine" class="collapse" aria-labelledby="headingFour" data-bs-parent="#custom-accordion-one" style="">
                                             <div class="card-body">
-
                                                 {!! __(
                                                     'To enter the system it is necessary to log in, to use the system in <strong>Demo</strong> mode you can log in with the following credentials: <br> <br> <strong>User: </strong>demo<br> <strong>Password: </strong>demo',
                                                 ) !!}
-
                                             </div>
                                         </div>
                                     </div>
+                                   
                                 </div>
 
                                 <br>
