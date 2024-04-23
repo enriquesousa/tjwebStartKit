@@ -37,13 +37,15 @@
                                 <div class="auth-logo">
                                     <a href="index.html" class="logo logo-dark text-center">
                                         <span class="logo-lg">
-                                            <img src="assets/images/logo-dark.png" alt="" height="22">
+                                            {{-- <img src="assets/images/logo-dark.png" alt="" height="22"> --}}
+                                            <img src="{{ asset('logo/TJWeblogo.png') }}" alt="" width="150px">
                                         </span>
                                     </a>
 
                                     <a href="index.html" class="logo logo-light text-center">
                                         <span class="logo-lg">
-                                            <img src="assets/images/logo-light.png" alt="" height="22">
+                                            {{-- <img src="assets/images/logo-light.png" alt="" height="22"> --}}
+                                            <img src="{{ asset('logo/TJWeblogo.png') }}" alt="" width="150px">
                                         </span>
                                     </a>
                                 </div>

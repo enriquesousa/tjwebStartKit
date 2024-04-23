@@ -113,6 +113,7 @@
                                                     <li>Registrar usuario</li>
                                                     <li>Login con username, teléfono o correo electrónico</li>
                                                     <li>Validación de Correo Electrónico</li>
+                                                    <li>Reset de Contraseña, verificación por correo</li>
                                                     <li>Autenticación de dos factores con correo electrónico</li>
                                                     <li>CRUD Admins</li>
                                                     <li>CRUD Empleados</li>

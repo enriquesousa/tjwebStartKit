@@ -50,6 +50,13 @@
                             </div>
 
 
+                            {{-- Estatus de Sesión, Para desplegar el mensaje si se restableció la contraseña --}}
+                            @if (session('status'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ session('status') }}
+                                </div>
+                            @endif
+
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
 

@@ -48,6 +48,7 @@
     "Terms and Conditions":  "términos y condiciones",
     "Already have an account?":  "¿Ya tienes una cuenta?",
     "Back to Home":  "Volver al inicio",
+    "Return to":  "Regresar a",
     "Confirm Email":  "Confirmar correo electrónico",
     "Thank you for signing up":  "Gracias por registrarte!",
 
@@ -118,7 +119,9 @@
 
     "Features": "Características",
 
-    "Enter your email, phone or username and password to access the administration panel.": "Introduce tu correo electrónico, teléfono o usuario y contraseña para acceder al panel de administración."
+    "Enter your email, phone or username and password to access the administration panel.": "Introduce tu correo electrónico, teléfono o usuario y contraseña para acceder al panel de administración.",
+
+    "Please enter your new password and confirm it.": "Por favor introduzca su nueva contraseña y confirme."
 
 
 }
