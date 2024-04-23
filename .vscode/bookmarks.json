@@ -1,0 +1,14 @@
+{
+	"files": [
+		{
+			"path": "resources/views/welcome.blade.php",
+			"bookmarks": [
+				{
+					"line": 126,
+					"column": 94,
+					"label": "margenes y ancho del parrafo"
+				}
+			]
+		}
+	]
+}

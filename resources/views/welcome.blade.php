@@ -49,13 +49,44 @@
                                 </g>
                             </svg>
 
-                            <h3 class="mt-4 text-white">Bienvenido | Pagina de Inicio</h3>
-                            <p class="text-white-50">TJ Web</p>
+                            {{-- Titulo --}}
+                            <h3 class="mt-4 text-white">{{ __('Welcome') }} | {{ __('Frontend Page') }}</h3>
+                            <p class="text-white-50">
+                                TJ Web Start Kit | {{ __('Full Stack Web Development') }}
+                                <br>
+                                <small class="text-muted">
+                                    Laravel v{{ Illuminate\Foundation\Application::VERSION }}
+                                    (PHP v{{ PHP_VERSION }})
+                                </small>
+                                <br>
+                                <small class="text-muted">
+                                    {{-- {!! htmlspecialchars_decode(date('j<\s\up>S</\s\up> F Y', strtotime(now()))) !!}  --}}
+                                    @php
+                                        $mytime = Carbon\Carbon::now();
+                                        // echo $mytime->toDateTimeString();
+                                    @endphp
+                                    {{-- {{ $mytime->format('d-M-Y H:i') }}  --}}
+                                    {{ formatFecha1($mytime) }} {{ $mytime->format('H:i') }}
+                                </small>
+                            </p>
 
                             {{-- si el usuario ya ha iniciado sesión --}}
                             @if (Auth::check())
-                                <p class="text-white-50">El usuario: {{ Auth::user()->name }}, ya ha iniciado sesión</p>
-                                <a href="{{ route('dashboard') }}" class="btn btn-success">Ir al Panel de Control</a>
+                                <p class="text-white-50">
+                                    {{ __('The user') }}: {{ Auth::user()->name }}, {{ __('is already logged in!') }}
+                                </p>
+
+                                <span class="text-muted">
+                                    <i class="ri-record-circle-line align-middle font-size-14 text-success"></i>
+                                    {{ __('You are logged in!') }}
+                                </span>
+                                <br>
+                                <br>
+
+                                <a href="{{ route('dashboard') }}" 
+                                    class="btn btn-success">
+                                    {{ __('Continue to dashboard') }}
+                                </a>
                             @endif
 
                             <div class="row mt-5">
@@ -68,8 +99,14 @@
                                                 <i class="dripicons-jewel font-22 avatar-title"></i>
                                             </a>
                                         </div>
-                                        <a href="{{ route('backend_welcome') }}" class=""><h5 class="text-uppercase mt-3 text-white">Aplicación</h5></a>
-                                        <p class="text-white-50">Ir directamente a la aplicación, donde podrás iniciar sesión o crear una cuenta para acceder</p>
+                                        <a href="{{ route('backend_welcome') }}" class="">
+                                            <h5 class="text-uppercase mt-3 text-white">
+                                                {{ __('Application') }}
+                                            </h5>
+                                        </a>
+                                        <p class="text-white-50 mx-auto" style="width: 300px;">
+                                            {{ __('Go directly to the app, where you can log in or create an account to access') }}
+                                        </p>
                                     </div>
                                 </div>
                                 
@@ -82,8 +119,17 @@
                                                 <i class="dripicons-question font-22 avatar-title"></i>
                                             </a>
                                         </div>
-                                        <a href="{{ route('page.ayuda') }}" class=""><h5 class="text-uppercase mt-3 text-white">Ayuda</h5></a>
-                                        <p class="text-white-50">Descripción breve de la aplicación. Para mayor información favor de contactarnos. <a href="mailto:#" class="text-white-50 fw-bold">soporte@tjweb.com.mx</a></p>
+                                        <a href="{{ route('page.ayuda') }}" class="">
+                                            <h5 class="text-uppercase mt-3 text-white">
+                                                {{ __('Help') }}
+                                            </h5>
+                                        </a>
+                                        <p class="text-white-50 mx-auto" style="width: 300px;">
+                                            {{ __('Brief description of the application. For more information please contact us') }}
+                                            <a href="mailto:#" class="text-white-50 fw-bold">
+                                                soporte@tjweb.com.mx
+                                            </a>
+                                        </p>
                                     </div>
                                 </div> 
 

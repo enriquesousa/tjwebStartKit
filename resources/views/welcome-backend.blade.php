@@ -51,7 +51,7 @@
                                         {{-- Titulo --}}
                                         <div class="mt-3">
                                             <h5 class="mb-1">
-                                                {{ __('Full Stack Web Developer') }} | TJ Web Start Kit
+                                                {{ __('Full Stack Web Development') }} | TJ Web Start Kit
                                             </h5>
                                         </div>
                                         
@@ -113,8 +113,8 @@
 
                                 <br>
 
+                                {{-- Acordeón --}}
                                 <div id="accordion" class="custom-accordion">
-
                                     <div class="card mb-1 shadow-none">
                                         <a href="#collapseOne" class="text-dark collapsed" data-bs-toggle="collapse"
                                             aria-expanded="false" aria-controls="collapseOne">
@@ -138,7 +138,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
 
                                 <br>
