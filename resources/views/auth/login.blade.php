@@ -99,6 +99,22 @@
                                     <button class="btn btn-primary" type="submit"> {{ __('Log in') }}</button>
                                 </div>
 
+                                {{-- ¿Olvidaste tu contraseña? y Crear una cuenta --}}
+                                <div class="form-group mb-0 row mt-2">
+                                    <div class="col-sm-7 mt-3">
+                                        <a href="{{ route('password.request') }}" class="text-muted">
+                                            <i class="mdi mdi-lock"></i>
+                                            {{ __('Forgot your password?') }}
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-5 mt-3">
+                                        <a href="{{ route('register') }}" class="text-muted">
+                                            <i class="mdi mdi-account-circle"></i>
+                                            {{ __('Create an account') }}
+                                        </a>
+                                    </div>
+                                </div>
+
                             </form>
 
                             {{-- Inicia sesión con Redes Sociales --}}
@@ -120,20 +136,14 @@
                                     </ul>
                                 </div> --}}
 
+
                         </div> <!-- end card-body -->
                     </div>
                     <!-- end card -->
 
-                    {{-- ¿Olvidaste tu contraseña?, Inscribirse --}}
-                    <div class="row mt-3">
-                        <div class="col-12 text-center">
-
-                            {{-- <p> <a href="auth-recoverpw.html" class="text-white-50 ms-1">¿Olvidaste tu contraseña?</a></p>
-                                <p class="text-white-50">¿No tienes una cuenta? <a href="auth-register.html" class="text-white ms-1"><b>Inscribirse</b></a></p> --}}
-
-                        </div> <!-- end col -->
-                    </div>
-                    <!-- end row -->
+                    
+                    
+                    
 
 
                 </div> <!-- end col -->
