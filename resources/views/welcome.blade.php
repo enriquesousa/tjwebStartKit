@@ -160,4 +160,5 @@
         <script src="{{ asset('backend/assets/js/app.min.js') }}"></script>
         
     </body>
+    
 </html>
