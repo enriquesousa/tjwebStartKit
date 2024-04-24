@@ -86,7 +86,7 @@
                                         <div class="input-group-text" data-password="false">
                                             <span class="password-eye"></span>
                                         </div>
-                                        @error('login')
+                                        @error('loginName')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
