@@ -167,11 +167,18 @@
 
                                 </div> <!-- end row -->
                                 
-                                <div class="text-end">
-                                    <button type="submit" class="btn btn-success waves-effect waves-light mt-2">
-                                        <i class="mdi mdi-content-save"></i>
-                                         Guardar
+                                <div class="d-flex justify-content-between">
+
+                                    <button type="submit" class="btn btn-primary waves-effect waves-light mt-2">
+                                        <img src="{{ asset('backend/assets/icons/save.svg') }}" alt="" height="20">
+                                        Guardar
                                     </button>
+
+                                    <a href="{{ route('change.password') }}" class="btn btn-secondary waves-effect waves-light mt-2">
+                                        <img src="{{ asset('backend/assets/icons/lock.svg') }}" alt="" height="20">
+                                        Cambiar Contraseña
+                                    </a>
+                                        
                                 </div>
 
                             </form>

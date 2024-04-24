@@ -332,15 +332,14 @@
                         <span>{{ __('My Profile') }}</span>
                     </a>
 
-                    <!-- item-->
+                    <!-- item - Cambiar Contraseña -->
                     <a href="javascript:void(0);" class="dropdown-item notify-item">
                         <i class="fe-settings"></i>
                         <span>Settings</span>
                     </a>
 
                     <!-- item-->
-                    {{-- {{ route('change.password') }} --}}
-                    <a href="" class="dropdown-item notify-item">
+                    <a href="{{ route('change.password') }}" class="dropdown-item notify-item">
                         <i class="fe-lock"></i>
                         <span>Cambiar Contraseña</span>
                     </a>
@@ -348,7 +347,7 @@
                     <div class="dropdown-divider"></div>
 
                     <!-- item-->
-                    <a href="{{ route('admin.logout') }}" class="dropdown-item notify-item">
+                    <a href="{{ route('admin.logout') }}" class="dropdown-item notify-item" style="color: red">
                         <i class="fe-log-out"></i>
                         <span>Salir</span>
                     </a>
@@ -382,7 +381,7 @@
 
             <a href="{{ route('dashboard') }}" class="logo logo-light text-center">
                 <span class="logo-sm">
-                    <img src="{{ asset('logo/TJWeb2-white.png') }}" alt="" height="62">
+                    <img src="{{ asset('logo/TJWeb2-white.png') }}" alt="" height="32">
                 </span>
                 <span class="logo-lg">
                     <img src="{{ asset('logo/TJWeb2-white.png') }}" alt="" height="62">

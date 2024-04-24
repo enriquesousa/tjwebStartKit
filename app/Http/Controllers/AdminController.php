@@ -73,6 +73,47 @@ class AdminController extends Controller
         return redirect()->back()->with($notification);
     }
 
+    // ChangePassword
+    public function ChangePassword()
+    {
+        // Para saber que usuario esta logueado
+        $id = Auth::user()->id;
+        $adminData = User::find($id);
+        return view('admin.change_password', compact('adminData'));
+    }
+
+    // UpdatePassword
+    public function UpdatePassword(Request $request)
+    {
+
+        // Validación
+        $request->validate([
+            'old_password' => 'required',
+            'new_password' => 'required|confirmed',
+        ]);
+
+        // Match The Old Password 
+        if (!Hash::check($request->old_password, auth::user()->password)) {
+
+            $notification = array(
+                'message' => '¡La contraseña anterior no coincide!',
+                'alert-type' => 'error'
+            );
+            return back()->with($notification);
+        }
+
+
+        //// Update The New Password 
+        User::whereId(auth()->user()->id)->update([
+            'password' => Hash::make($request->new_password)
+        ]);
+
+        $notification = array(
+            'message' => 'Cambio de contraseña exitoso',
+            'alert-type' => 'success'
+        );
+        return back()->with($notification);
+    }
 
 
     
