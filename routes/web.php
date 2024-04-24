@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AdminController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -36,3 +38,11 @@ require __DIR__.'/auth.php';
 Route::get('/page/ayuda', function () {
     return view('page_ayuda');  
 })->name('page.ayuda');
+
+
+Route::get('/admin/logout', [AdminController::class, 'AdminDestroy'])->name('admin.logout');
+Route::get('/logout', [AdminController::class, 'AdminLogoutPage'])->name('admin.logout.page');
+
+
+
+
