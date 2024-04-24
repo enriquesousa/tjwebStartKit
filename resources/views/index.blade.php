@@ -49,8 +49,8 @@
                                         {{ __('Go to my profile') }}
                                     </p>
 
-                                    {{-- {{ route('admin.profile') }} --}}
-                                    <a href="" class="btn btn-success">
+                                    {{-- Ir a mi perfil --}}
+                                    <a href="{{ route('admin.profile') }}" class="btn btn-success">
                                         <i class="fas fa-user"></i>&nbsp;&nbsp;
                                         {{ Auth::user()->name }}
                                     </a>

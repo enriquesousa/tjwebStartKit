@@ -4,7 +4,7 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>Logout</title>
+        <title>Logout | {{ config('app.name', 'Laravel') }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -41,7 +41,7 @@
                                 <div class="text-center w-75 m-auto">
                                     <div class="auth-logo">
 
-                                        <a href="{{ url('/') }}" class="logo logo-dark text-center">
+                                        <a href="{{ route('backend_welcome') }}" class="logo logo-dark text-center">
                                             <span class="logo-lg">
                                                 <img src="{{ asset('logo/TJWeblogo.png') }}" alt="" width="150px">
                                             </span>
@@ -71,10 +71,15 @@
 
                         <div class="row mt-3">
                             <div class="col-12 text-center">
-                                <p class="text-white-50">Back to <a href="{{ route('login') }}" class="text-white ms-1"><b>Iniciar sesión</b></a></p>
-                            </div> <!-- end col -->
+                                <p class="text-white-50">Back to 
+                                    <a href="{{ route('login') }}" 
+                                        class="text-white ms-1">
+                                        <b>Iniciar sesión</b>
+                                    </a>
+                                </p>
+                            </div>
                         </div>
-                        <!-- end row -->
+                        
 
                     </div> <!-- end col -->
                 </div>

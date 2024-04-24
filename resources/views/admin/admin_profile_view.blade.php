@@ -60,11 +60,25 @@
 
                         <div class="text-start mt-3">
                             
-                            <p class="text-muted mb-2 font-13"><strong>Nombre:</strong> <span class="ms-2">{{ $adminData->name }}</span></p>
+                            <p class="text-muted mb-2 font-13">
+                                <strong>Nombre:</strong>
+                                <span class="ms-2">{{ $adminData->name }}</span>
+                            </p>
+
+                            <p class="text-muted mb-2 font-13">
+                                <strong>Nombre Corto:</strong>
+                                <span class="ms-2">{{ $adminData->username }}</span>
+                            </p>
                         
-                            <p class="text-muted mb-2 font-13"><strong>Teléfono:</strong><span class="ms-2">{{ $adminData->phone }}</span></p>
+                            <p class="text-muted mb-2 font-13">
+                                <strong>Teléfono:</strong>
+                                <span class="ms-2">{{ $adminData->phone }}</span>
+                            </p>
                         
-                            <p class="text-muted mb-2 font-13"><strong>Correo:</strong> <span class="ms-2">{{ $adminData->email }}</span></p>
+                            <p class="text-muted mb-2 font-13">
+                                <strong>Correo:</strong>
+                                <span class="ms-2">{{ $adminData->email }}</span>
+                            </p>
                             
                         </div>                                    
 
@@ -85,23 +99,21 @@
                     </div>                                 
                 </div> <!-- end card -->
 
-
             </div> <!-- end col-->
 
             {{-- 2da Columna --}}
             <div class="col-lg-8 col-xl-8">
                 <div class="card">
-
                     <div class="card-body">
-
                         {{-- Editar datos del Perfil --}}
                         <div class="tab-pane" id="settings">
-
-                            {{-- {{ route('admin.profile.store') }} --}}
-                            <form method="post" action="" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('admin.profile.store') }}" enctype="multipart/form-data">
                                 @csrf
 
-                                <h5 class="mb-4 text-uppercase"><i class="mdi mdi-account-circle me-1"></i> Editar Info</h5>
+                                <h5 class="mb-4 text-uppercase">
+                                    <i class="mdi mdi-account-circle me-1"></i>
+                                    Editar Información
+                                </h5>
 
                                 <div class="row">
 
@@ -110,6 +122,14 @@
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Nombre</label>
                                             <input type="text" name="name" class="form-control" value="{{ $adminData->name }}">
+                                        </div>
+                                    </div>
+
+                                    {{-- Nombre Corto --}}
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="username" class="form-label">Nombre Corto</label>
+                                            <input type="text" name="username" class="form-control" value="{{ $adminData->username }}">
                                         </div>
                                     </div>
                                     
@@ -125,7 +145,7 @@
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label for="phone" class="form-label">Teléfono</label>
-                                            <input type="text" name="phone" class="form-control"  value="{{ $adminData->phone }}">
+                                            <input type="number" name="phone" class="form-control"  value="{{ $adminData->phone }}">
                                         </div>
                                     </div> <!-- end col -->
 
@@ -147,21 +167,18 @@
 
                                 </div> <!-- end row -->
                                 
-                                
                                 <div class="text-end">
                                     <button type="submit" class="btn btn-success waves-effect waves-light mt-2">
                                         <i class="mdi mdi-content-save"></i>
                                          Guardar
                                     </button>
                                 </div>
-                            </form>
 
+                            </form>
                         </div>
                         <!-- end Editar datos del Perfil-->
-
                     </div>
                 </div> <!-- end card-->
-
             </div> <!-- end col -->
 
         </div>
