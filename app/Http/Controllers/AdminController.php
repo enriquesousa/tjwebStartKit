@@ -31,5 +31,16 @@ class AdminController extends Controller
         return view('admin.admin_logout');
     }
 
+    //  AdminProfile
+    public function AdminProfile()
+    {
+        // Para saber que usuario esta logueado
+        $id = Auth::user()->id;
+        $adminData = User::find($id);
+        $allAdminUsers = User::latest()->get();
+        return view('admin.admin_profile_view', compact('adminData', 'allAdminUsers'));
+    }
+
+    
 
 }

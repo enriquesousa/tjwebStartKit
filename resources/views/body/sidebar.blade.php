@@ -83,7 +83,7 @@
                 </li>
 
                 {{-- PANEL DE CONTROL --}}
-                @if (Auth::user()->can('panel.control'))
+                {{-- @if (Auth::user()->can('panel.control')) --}}
                     <li>
                         {{-- {{ route('dashboard_control') }} --}}
                         <a href="">
@@ -91,19 +91,19 @@
                             <span> Panel Control </span>
                         </a>
                     </li>
-                @endif
+                {{-- @endif --}}
 
                 {{-- PDV --}}
-                @if (Auth::user()->can('panel.pdv'))
+                {{-- @if (Auth::user()->can('panel.pdv')) --}}
                     <li>
                         {{-- {{ route('pos') }} --}}
                         <a href="">
-                            <span class="badge bg-pink float-end">{{ Cart::count() }}</span>
+                            {{-- <span class="badge bg-pink float-end">{{ Cart::count() }}</span> --}}
                             <i class="mdi mdi-view-dashboard-outline"></i>
                             <span> PDV </span>
                         </a>
                     </li>
-                @endif
+                {{-- @endif --}}
 
 
 
@@ -116,15 +116,14 @@
 
 
                 {{-- * MANEJO DE DINERO --}}
-                @if (Auth::user()->can('gastos.menu'))
+                {{-- @if (Auth::user()->can('gastos.menu')) --}}
 
                     <li class="menu-title mt-2">
                         <img src="{{ asset('backend/assets/icons/dinero.svg') }}" alt="" height="20">
                         <span class="badge bg-primary">MANEJO DE DINERO</span>
                     </li>
                     
-
-                @endif
+                {{-- @endif --}}
 
                 {{-- * Data: Empleados, Clientes, Proveedores, Datos --}}
                 <li class="menu-title mt-2">
@@ -133,7 +132,7 @@
                 </li>
 
                 {{-- Control de Empleados --}}
-                @if (Auth::user()->can('empleado.menu'))
+                {{-- @if (Auth::user()->can('empleado.menu')) --}}
                     <li>
                         <a href="#sidebarEmpleados" data-bs-toggle="collapse">
                             <i class="mdi mdi-account-multiple-outline"></i>
@@ -142,25 +141,25 @@
                         </a>
                         <div class="collapse" id="sidebarEmpleados">
                             <ul class="nav-second-level">
-                                @if (Auth::user()->can('empleado.all'))
+                                {{-- @if (Auth::user()->can('empleado.all')) --}}
                                     <li>
                                         {{-- {{ route('all.employee') }} --}}
                                         <a href="">Lista Empleados</a>
                                     </li>
-                                @endif
-                                @if (Auth::user()->can('empleado.add'))
+                                {{-- @endif --}}
+                                {{-- @if (Auth::user()->can('empleado.add')) --}}
                                     <li>
                                         {{-- {{ route('employee.add') }} --}}
                                         <a href="">Agregar Empleado</a>
                                     </li>
-                                @endif
+                                {{-- @endif --}}
                             </ul>
                         </div>
                     </li>
-                @endif
+                {{-- @endif --}}
 
                 {{-- Control de Clientes --}}
-                @if (Auth::user()->can('cliente.menu'))
+                {{-- @if (Auth::user()->can('cliente.menu')) --}}
                     <li>
                         <a href="#sidebarClientes" data-bs-toggle="collapse">
                             <i class="mdi mdi-account-multiple-outline"></i>
@@ -169,25 +168,25 @@
                         </a>
                         <div class="collapse" id="sidebarClientes">
                             <ul class="nav-second-level">
-                                @if (Auth::user()->can('cliente.all'))
+                                {{-- @if (Auth::user()->can('cliente.all')) --}}
                                     <li>
                                         {{-- {{ route('all.customer') }} --}}
                                         <a href="">Lista Clientes</a>
                                     </li>
-                                @endif
-                                @if (Auth::user()->can('cliente.add'))
+                                {{-- @endif --}}
+                                {{-- @if (Auth::user()->can('cliente.add')) --}}
                                     <li>
                                         {{-- {{ route('customer.add') }} --}}
                                         <a href="">Agregar Cliente</a>
                                     </li>
-                                @endif
+                                {{-- @endif --}}
                             </ul>
                         </div>
                     </li>
-                @endif
+                {{-- @endif --}}
 
                 {{-- Control de Proveedores --}}
-                @if (Auth::user()->can('proveedor.menu'))
+                {{-- @if (Auth::user()->can('proveedor.menu')) --}}
                     <li>
                         <a href="#sidebarProveedores" data-bs-toggle="collapse">
                             <i class="mdi mdi-account-multiple-outline"></i>
@@ -196,25 +195,25 @@
                         </a>
                         <div class="collapse" id="sidebarProveedores">
                             <ul class="nav-second-level">
-                                @if (Auth::user()->can('proveedor.all'))
+                                {{-- @if (Auth::user()->can('proveedor.all')) --}}
                                     <li>
                                         {{-- {{ route('all.supplier') }} --}}
                                         <a href="">Lista de Proveedores</a>
                                     </li>
-                                @endif
-                                @if (Auth::user()->can('proveedor.add'))
+                                {{-- @endif --}}
+                                {{-- @if (Auth::user()->can('proveedor.add')) --}}
                                     <li>
                                         {{-- {{ route('supplier.add') }} --}}
                                         <a href="">Agregar Proveedor</a>
                                     </li>
-                                @endif
+                                {{-- @endif --}}
                             </ul>
                         </div>
                     </li>
-                @endif
+                {{-- @endif --}}
 
                 {{-- Configuración de Datos --}}
-                @if (Auth::user()->can('datos.menu'))
+                {{-- @if (Auth::user()->can('datos.menu')) --}}
                     <li>
                         <a href="#sidebarConfigData" data-bs-toggle="collapse">
                             <i class="mdi mdi-poll"></i>
@@ -230,7 +229,7 @@
                             </ul>
                         </div>
                     </li>
-                @endif
+                {{-- @endif --}}
 
 
 
@@ -242,7 +241,7 @@
                 </li>
 
                 {{-- Roles y Permisos --}}
-                @if (Auth::user()->can('permisos.menu'))
+                {{-- @if (Auth::user()->can('permisos.menu')) --}}
                     <li>
                         <a href="#roles" data-bs-toggle="collapse">
                             <i class="mdi mdi-account-cog-outline"></i>
@@ -271,10 +270,10 @@
                             </ul>
                         </div>
                     </li>
-                @endif
+                {{-- @endif --}}
 
                 {{-- Admin Configuración de Usuarios --}}
-                @if (Auth::user()->can('usuarios.menu'))
+                {{-- @if (Auth::user()->can('usuarios.menu')) --}}
                     <li>
                         <a href="#admin" data-bs-toggle="collapse">
                             <i class="mdi mdi-account-settings-outline"></i>
@@ -294,10 +293,10 @@
                             </ul>
                         </div>
                     </li>
-                @endif
+                {{-- @endif --}}
 
                 {{-- Respaldo Database --}}
-                @if (Auth::user()->can('respaldo.menu'))
+                {{-- @if (Auth::user()->can('respaldo.menu')) --}}
                     <li>
                         <a href="#respaldo_menu" data-bs-toggle="collapse">
                             <i class="mdi mdi-backup-restore"></i>
@@ -313,7 +312,7 @@
                             </ul>
                         </div>
                     </li>
-                @endif
+                {{-- @endif --}}
 
 
 

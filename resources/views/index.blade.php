@@ -1,12 +1,10 @@
 @extends('admin_dashboard')
 @section('admin')
-    <div class="content">
 
+    <div class="content">
         <body class="authentication-bg authentication-bg-pattern">
-            
             <!-- Start Content-->
             <div class="container-fluid">
-    
                 <div class="row justify-content-center">
                     <div class="col-12">
     
@@ -34,7 +32,7 @@
                                 </g>
                             </svg>
     
-                            <h3 class="mt-4 text-white">Bienvenido</h3>
+                            <h3 class="mt-4 text-white">{{ __('Welcome') }}</h3>
                             <p class="text-white-50">TJ Web Start Kit</p>
                             
                             {{-- Botones de links --}}
@@ -48,7 +46,7 @@
 
                                 <div class="col-2">
                                     <p class="text-white-50"> 
-                                        Ir a mi Perfil
+                                        {{ __('Go to my profile') }}
                                     </p>
 
                                     {{-- {{ route('admin.profile') }} --}}
@@ -62,13 +60,13 @@
                                 <div class="col-2">
                                     <p class="text-white-50">
                                         <i class="ri-money-dollar-circle-fill"></i> 
-                                        Ir a Punto de Venta
+                                        {{ __('Go to Control Panel') }}
                                     </p>
 
                                     {{-- {{ route('pos') }} --}}
                                     <a href="" class="btn btn-success">
                                         <i class="fas fa-cash-register"></i>&nbsp;&nbsp;
-                                        PDV
+                                        {{ __('Control Panel') }}
                                     </a>
 
                                 </div>
@@ -86,10 +84,8 @@
                     </div> <!-- end col -->
                 </div>
                 <!-- end row -->
-    
             </div> <!-- container -->
-
         </body>
-
     </div> <!-- content -->
+
 @endsection

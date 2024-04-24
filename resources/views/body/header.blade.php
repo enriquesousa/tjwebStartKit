@@ -327,10 +327,9 @@
                     </div>
 
                     <!-- Mi Perfil -->
-                    {{-- {{ route('admin.profile') }} --}}
-                    <a href="" class="dropdown-item notify-item">
+                    <a href="{{ route('admin.profile') }}" class="dropdown-item notify-item">
                         <i class="fe-user"></i>
-                        <span>Mi Perfil</span>
+                        <span>{{ __('My Profile') }}</span>
                     </a>
 
                     <!-- item-->

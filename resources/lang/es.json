@@ -121,7 +121,12 @@
 
     "Enter your email, phone or username and password to access the administration panel.": "Introduce tu correo electrónico, teléfono o usuario y contraseña para acceder al panel de administración.",
 
-    "Please enter your new password and confirm it.": "Por favor introduzca su nueva contraseña y confirme."
+    "Please enter your new password and confirm it.": "Por favor introduzca su nueva contraseña y confirme.",
 
+    "Go to my profile": "Ir a mi perfil",
+    "Go to Control Panel": "Ir al panel de control",
+    "Control Panel": "Panel de Control",
+    "My Profile": "Mi Perfil",
+    "Admin Profile": "Perfil de Administrador"
 
 }
