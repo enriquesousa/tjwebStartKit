@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8" />
     <title>Login | {{ config('app.name', 'Laravel') }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,6 +22,16 @@
     <!-- Head js -->
     <script src="{{ asset('backend/assets/js/head.js') }}"></script>
 
+    {{-- CSS en vista blade, lo voy a usar para deshabilitar los a tag de social login que no voy a usar --}}
+    <style type="text/css">
+        a.disabled {
+            /* Make the disabled links grayish*/
+            color: gray;
+            /* And disable the pointer events */
+            pointer-events: none;
+        } 
+    </style>
+
 </head>
 
 <body class="authentication-bg authentication-bg-pattern">
@@ -31,7 +42,6 @@
                 <div class="col-md-8 col-lg-6 col-xl-4">
                     
                     <div class="card bg-pattern">
-
                         <div class="card-body p-4">
 
                             <div class="text-center w-75 m-auto">
@@ -106,52 +116,75 @@
                                     <button class="btn btn-primary" type="submit"> {{ __('Log in') }}</button>
                                 </div>
 
-                                {{-- ¿Olvidaste tu contraseña? y Crear una cuenta --}}
-                                <div class="form-group mb-0 row mt-2">
-                                    <div class="col-sm-7 mt-3">
-                                        <a href="{{ route('password.request') }}" class="text-muted">
-                                            <i class="mdi mdi-lock"></i>
-                                            {{ __('Forgot your password?') }}
-                                        </a>
-                                    </div>
-                                    <div class="col-sm-5 mt-3">
-                                        <a href="{{ route('register') }}" class="text-muted">
-                                            <i class="mdi mdi-account-circle"></i>
-                                            {{ __('Create an account') }}
-                                        </a>
-                                    </div>
-                                </div>
-
                             </form>
 
                             {{-- Inicia sesión con Redes Sociales --}}
-                            {{-- <div class="text-center">
-                                    <h5 class="mt-3 text-muted">Inicia sesión con</h5>
-                                    <ul class="social-list list-inline mt-3 mb-0">
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);" class="social-list-item border-primary text-primary"><i class="mdi mdi-facebook"></i></a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);" class="social-list-item border-danger text-danger"><i class="mdi mdi-google"></i></a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);" class="social-list-item border-info text-info"><i class="mdi mdi-twitter"></i></a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);" class="social-list-item border-secondary text-secondary"><i class="mdi mdi-github"></i></a>
-                                        </li>
-                                    </ul>
-                                </div> --}}
+                            <div class="text-center">
+                                <h5 class="mt-3 text-muted">{{ __('Sign in with') }}</h5>
+                                <ul class="social-list list-inline mt-3 mb-0">
 
+                                    {{-- Facebook --}}
+                                    <li class="list-inline-item">
+                                        {{-- <a href="#" class="social-list-item border-primary text-primary">
+                                            <i class="mdi mdi-facebook"></i>
+                                        </a> --}}
+                                        <a href="#" class="social-list-item border-muted text-muted disabled">
+                                            <i class="mdi mdi-facebook"></i>
+                                        </a>
+                                    </li>
+
+                                    {{-- Google --}}
+                                    <li class="list-inline-item">
+                                        <a href="javascript: void(0);" class="social-list-item border-danger text-danger">
+                                            <i class="mdi mdi-google"></i>
+                                        </a>
+                                        {{-- <a href="javascript: void(0);" class="social-list-item border-muted text-muted disabled">
+                                            <i class="mdi mdi-google"></i>
+                                        </a> --}}
+                                    </li>
+
+                                    {{-- Twitter --}}
+                                    <li class="list-inline-item">
+                                        {{-- <a href="javascript: void(0);" class="social-list-item border-info text-info">
+                                            <i class="mdi mdi-twitter"></i>
+                                        </a> --}}
+                                        <a href="javascript: void(0);" class="social-list-item border-muted text-muted disabled">
+                                            <i class="mdi mdi-twitter"></i>
+                                        </a>
+                                    </li>
+
+                                    {{-- GitHub --}}
+                                    <li class="list-inline-item">
+                                        {{-- <a href="javascript: void(0);" class="social-list-item border-secondary text-secondary">
+                                            <i class="mdi mdi-github"></i>
+                                        </a> --}}
+                                        <a href="javascript: void(0);" class="social-list-item border-muted text-muted disabled">
+                                            <i class="mdi mdi-github"></i>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
 
                         </div> <!-- end card-body -->
+
                     </div>
-                    <!-- end card -->
 
-                    
-                    
-                    
-
+                    {{-- ¿Olvidaste tu contraseña? y Crear una cuenta --}}
+                    <div class="form-group mb-0 row mt-2">
+                        <div class="col-sm-7 mt-3">
+                            <a href="{{ route('password.request') }}" class="text-muted">
+                                <i class="mdi mdi-lock"></i>
+                                {{ __('Forgot your password?') }}
+                            </a>
+                        </div>
+                        <div class="col-sm-5 mt-3">
+                            <a href="{{ route('register') }}" class="text-muted">
+                                <i class="mdi mdi-account-circle"></i>
+                                {{ __('Create an account') }}
+                            </a>
+                        </div>
+                    </div>
 
                 </div> <!-- end col -->
             </div>
@@ -160,7 +193,6 @@
         <!-- end container -->
     </div>
     <!-- end page -->
-
 
     <footer class="footer footer-alt">
         2023 -

@@ -21,6 +21,16 @@
 		<!-- Head js -->
 		<script src="{{ asset('backend/assets/js/head.js') }}"></script>
 
+        {{-- CSS en vista blade, lo voy a usar para deshabilitar los a tag de social login que no voy a usar --}}
+        <style type="text/css">
+            a.disabled {
+                /* Make the disabled links grayish*/
+                color: gray;
+                /* And disable the pointer events */
+                pointer-events: none;
+            } 
+        </style>
+
     </head>
 
     <body class="authentication-bg authentication-bg-pattern">
@@ -131,7 +141,7 @@
 
                                 {{-- Social Media Login --}}
                                 {{-- <div class="text-center">
-                                    <h5 class="mt-3 text-muted">Sign up using</h5>
+                                    <h5 class="mt-3 text-muted">{{ __('Sign up using') }}</h5>
                                     <ul class="social-list list-inline mt-3 mb-0">
                                         <li class="list-inline-item">
                                             <a href="javascript: void(0);" class="social-list-item border-primary text-primary"><i class="mdi mdi-facebook"></i></a>
@@ -147,6 +157,54 @@
                                         </li>
                                     </ul>
                                 </div> --}}
+
+                                {{-- Registrarse con Redes Sociales --}}
+                                <div class="text-center">
+                                    <h5 class="mt-3 text-muted">{{ __('Sign up using') }}</h5>
+                                    <ul class="social-list list-inline mt-3 mb-0">
+
+                                        {{-- Facebook --}}
+                                        <li class="list-inline-item">
+                                            {{-- <a href="#" class="social-list-item border-primary text-primary">
+                                                <i class="mdi mdi-facebook"></i>
+                                            </a> --}}
+                                            <a href="#" class="social-list-item border-muted text-muted disabled">
+                                                <i class="mdi mdi-facebook"></i>
+                                            </a>
+                                        </li>
+
+                                        {{-- Google --}}
+                                        <li class="list-inline-item">
+                                            <a href="javascript: void(0);" class="social-list-item border-danger text-danger">
+                                                <i class="mdi mdi-google"></i>
+                                            </a>
+                                            {{-- <a href="javascript: void(0);" class="social-list-item border-muted text-muted disabled">
+                                                <i class="mdi mdi-google"></i>
+                                            </a> --}}
+                                        </li>
+
+                                        {{-- Twitter --}}
+                                        <li class="list-inline-item">
+                                            {{-- <a href="javascript: void(0);" class="social-list-item border-info text-info">
+                                                <i class="mdi mdi-twitter"></i>
+                                            </a> --}}
+                                            <a href="javascript: void(0);" class="social-list-item border-muted text-muted disabled">
+                                                <i class="mdi mdi-twitter"></i>
+                                            </a>
+                                        </li>
+
+                                        {{-- GitHub --}}
+                                        <li class="list-inline-item">
+                                            {{-- <a href="javascript: void(0);" class="social-list-item border-secondary text-secondary">
+                                                <i class="mdi mdi-github"></i>
+                                            </a> --}}
+                                            <a href="javascript: void(0);" class="social-list-item border-muted text-muted disabled">
+                                                <i class="mdi mdi-github"></i>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
 
                             </div> <!-- end card-body -->
                         </div>
