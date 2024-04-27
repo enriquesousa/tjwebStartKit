@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\TwoFactorController;
 
 
 Route::get('/', function () {
@@ -36,6 +37,11 @@ Route::get('/backend/welcome', function () {
     return view('welcome-backend');
 })->name('backend_welcome');
 
+
+Route::middleware(['auth', 'twofactor'])->group(function () {
+    Route::get('verify/resend', [TwoFactorController::class, 'resend'])->name('verify.resend');
+    Route::resource('verify', TwoFactorController::class)->only(['index', 'store']);
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

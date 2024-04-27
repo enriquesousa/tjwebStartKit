@@ -44,4 +44,22 @@ class User extends Authenticatable implements MustVerifyEmail
             'password' => 'hashed',
         ];
     }
+
+
+    public function generateTwoFactorCode(): void
+    {
+        $this->timestamps = false;  // Prevent updating the 'updated_at' column
+        $this->two_factor_code = rand(100000, 999999);  // Generate a random code
+        $this->two_factor_expires_at = now()->addMinutes(10);  // Set expiration time
+        $this->save();
+    }
+
+    public function resetTwoFactorCode(): void
+    {
+        $this->timestamps = false;
+        $this->two_factor_code = null;
+        $this->two_factor_expires_at = null;
+        $this->save();
+    }
+
 }
